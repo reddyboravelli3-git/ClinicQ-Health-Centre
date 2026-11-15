@@ -22,7 +22,8 @@ router.get("/:id", (req, res) => {
     res.json(doctor);
 });
 
-// POST new doctor
+
+ // POST new doctor with validation
 router.post("/", (req, res) => {
     const { name, specialization } = req.body;
 
@@ -32,14 +33,32 @@ router.post("/", (req, res) => {
         });
     }
 
-    const result = db.prepare(
-        "INSERT INTO doctors (name, specialization) VALUES (?, ?)"
-    ).run(name, specialization);
+    if (typeof name !== "string" || typeof specialization !== "string") {
+        return res.status(400).json({
+            message: "Name and specialization must be text"
+        });
+    }
 
-    res.status(201).json({
-        message: "Doctor added successfully",
-        id: result.lastInsertRowid
-    });
+    if (!name.trim() || !specialization.trim()) {
+        return res.status(400).json({
+            message: "Fields cannot contain only spaces"
+        });
+    }
+
+    try {
+        const result = db.prepare(
+            "INSERT INTO doctors (name, specialization) VALUES (?, ?)"
+        ).run(name.trim(), specialization.trim());
+
+        res.status(201).json({
+            message: "Doctor added successfully",
+            id: result.lastInsertRowid
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Failed to add doctor"
+        });
+    }
 });
 
 module.exports = router;
