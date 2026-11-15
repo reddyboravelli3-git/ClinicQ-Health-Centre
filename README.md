@@ -197,4 +197,45 @@ It provides functionality for managing doctors, consultation rooms, and bookings
 
 The project helped our team understand backend development, database integration, REST API methods, and API testing using Postman.
 
+## 11. Student Details
+
+**Student Names:**
+
+1. Sai Rashmitha
+2. Gnanasahitya Reddy
+3. Sai Vinitha
+4. Mahesh
+5. Tejo Sai
+
+**Registration Numbers:**
+
+1. 252U1R9056
+2. 252U1R9021
+3. 252U1R9054
+4. 252U1R9034
+5. 252U1R9002
+
+**Section:** CSE (Gen-AI) 2A
+
+**Course:** Backend Development Fundamentals
+
+**Academic Year:** II Year, Term II
+
+**Institution:** Aurora Deemed to be University
+
+**Faculty:** Mr. Joel Prashanth D.
+
+## 12. Team Members
+
+The ClinicQ project was developed collaboratively by the following team members:
+
+1. **Sai Rashmitha** – 252U1R9056
+2. **Gnanasahitya Reddy** – 252U1R9021
+3. **Sai Vinitha** – 252U1R9054
+4. **Mahesh** – 252U1R9034
+5. **Tejo Sai** – 252U1R9002
+
+---
+
+
 **GitHub Repository:** https://github.com/reddyboravelli3-git/ClinicQ-Health-Centre
